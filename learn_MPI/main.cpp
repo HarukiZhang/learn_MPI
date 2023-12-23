@@ -5,7 +5,7 @@
 
 #include "LONG_DEC.h"
 
-//#define USE_MASTER_SLAVE
+#define USE_MASTER_SLAVE
 
 typedef void (*Series_Method)(INT64, LONG_DEC&, LONG_DEC&);
 
@@ -134,6 +134,8 @@ int main(int argc, char** argv)
 		int assigned = 0;
 		int probe_flag = 0;
 
+		// here I was about to use fibonacci array to scale down batch_size,
+		// but effect is not so good.
 		//std::vector<int> fibo_list;
 		//{
 		//	int ss = 0;
